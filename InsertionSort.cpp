@@ -14,7 +14,7 @@ void trace(int a[], int n){
 int main()
 {
 	int n, i, j;
-	int a[n+1];
+	int a[100+1];
 	
 	cin >> n;
 	for(i = 1; i <=n; i++){
