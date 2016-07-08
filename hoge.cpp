@@ -1,4 +1,4 @@
-#include <iostream>
+include <iostream>
 using namespace std;
 
 int main()
@@ -28,8 +28,8 @@ int main()
 	}
 
 	//ˆ—
-	for(int i = 0; i  < n; i++){
-		(!m1a[i]) ? m1a[i] += m2a[i] : m1a[i] = 0;
+	for(int i = 0; i < n ; i++){
+		m1a[i] = (!m1a[i]) ?  m2a[i] :  0;
 	}
 
 	//o—Í
@@ -39,9 +39,14 @@ int main()
 	if(m == 0){
 		cout << "None" << endl;
 	}else{
-		for(int i = 0; i < n; i++)
-			if(m1a[i])
-				(i == n-1) ? cout << i+1 << endl : cout << i+1 << " ";
+		for(int i = 0, flag = false; i < n; i++)
+			if(m1a[i]) {
+			//	(i == n-1) ? cout << i+1 << endl : cout << i+1 << " ";
+					if (flag) cout << " ";
+					(i == n-1) ? cout << i+1 : cout << i+1;
+					flag = true;	
+				}
+
 	}
 	
 	return 0;
