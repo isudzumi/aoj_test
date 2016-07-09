@@ -3,6 +3,8 @@
 using namespace std;
 
 int main(){
+	cin.tie(0);
+	ios::sync_with_stdio(0);
 	int n;
 	list<int> li;
 	list<int>::iterator itr;
@@ -28,10 +30,8 @@ int main(){
 			li.pop_back();
 		}
 	}
-	itr = li.begin();
-	for(int i = 0; i < li.size(); ++i){
-		(i < li.size()-1) ? cout << *itr << " " : cout << *itr << endl;	
-		++itr;
-	}
+	for(itr = li.begin(); itr != --li.end(); ++itr)
+		cout << *itr << " ";
+	cout << *itr << endl;
 	return 0;
 }	
